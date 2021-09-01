@@ -1,0 +1,78 @@
+[System]
+Name='Fuzzy Logic Group 6 Cardio'
+Type='mamdani'
+Version=2.0
+NumInputs=7
+NumOutputs=1
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='FHR_Baseline_(LB)'
+Range=[60 240]
+NumMFs=3
+MF1='Low':'gbellmf',[50 7.5 60]
+MF2='Normal':'gbellmf',[14.2 2.5 135.4]
+MF3='High':'gbellmf',[43.7 5.82 210.2]
+
+[Input2]
+Name='Acceleration'
+Range=[0 30]
+NumMFs=2
+MF1='Absent':'trapmf',[-19.6 -11.7 0.00628 7.31]
+MF2='Present':'trapmf',[2.94 8.94 31.5381649961449 32.1]
+
+[Input3]
+Name='Uterine_Contraction'
+Range=[0 60]
+NumMFs=2
+MF1='Low':'gbellmf',[11.7 3.28 -5.1788535080956]
+MF2='High':'gbellmf',[41.3496828752643 13.5 50.8]
+
+[Input4]
+Name='Fetal_Movement'
+Range=[0 30]
+NumMFs=2
+MF1='Abnormal':'gbellmf',[5.616 3.278 0.849]
+MF2='Normal':'gbellmf',[11.7 10.1 20.5864302235929]
+
+[Input5]
+Name='DL'
+Range=[0 20]
+NumMFs=2
+MF1='Absent':'trimf',[-3.96 0.0431 7.39398612181958]
+MF2='Present':'trapmf',[4.54124903623747 7.63 20.4 21.4]
+
+[Input6]
+Name='ASTV'
+Range=[0 120]
+NumMFs=2
+MF1='Normal':'trapmf',[-68.9 -46.1 40 65]
+MF2='Abnormal':'trapmf',[40 60 127.7 129]
+
+[Input7]
+Name='MSTV'
+Range=[0 7]
+NumMFs=2
+MF1='Abnormal':'trapmf',[-1.62 -0.54 0.022198731501057 1]
+MF2='Normal':'trapmf',[0.5 1.5 7.28 9.66]
+
+[Output1]
+Name='output1'
+Range=[0 3]
+NumMFs=3
+MF1='Normal':'trimf',[0 0.5 1]
+MF2='Suspect':'trimf',[1 1.5 2]
+MF3='Pathologic':'trimf',[2 2.5 3]
+
+[Rules]
+2 2 2 2 1 1 2, 1 (1) : 1
+1 1 1 1 2 0 0, 3 (1) : 1
+2 2 1 2 1 2 1, 2 (1) : 1
+2 1 2 2 1 2 1, 2 (1) : 1
+2 2 2 1 2 2 1, 2 (1) : 1
+0 0 0 0 2 0 0, 3 (1) : 1
