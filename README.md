@@ -37,4 +37,12 @@ In this experiment there are total of 23 features and 2126 CTG records. It is co
  </ol>
  
  ## Model Evaluation
- <img src
+ <img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/4.jpg"/>
+ <ol>
+   <li> The models were evaluated using cross validation before its parameters were tuned </li>
+</ol>
+    
+<img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/5.jpg"/>
+<ol>
+     <li> The models were evaluated again with train data and test data after choosing the right hyperparameters </li>
+</ol>
