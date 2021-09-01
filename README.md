@@ -42,7 +42,13 @@ In this experiment there are total of 23 features and 2126 CTG records. It is co
    <li> The models were evaluated using cross validation before its parameters were tuned </li>
 </ol>
     
-<img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/5.jpg"/>
+<img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/5.jpg" width="500px" height="450px"/>
 <ol>
      <li> The models were evaluated again with train data and test data after choosing the right hyperparameters </li>
 </ol>
+
+## Snippets of Fuzzy Logic Model
+
+<img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/6.jpg" width="500px" height="450px"/>
+<img src="https://github.com/Sharvin1106/CTG-Prediction/blob/main/ImagesCTG/7.jpg" width="500px" height="450px"/>
+<i> For more info please refer to our .fis file </i>
